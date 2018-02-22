@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@color/colorAccent" />
+
+    <item>
+        <!-- Aligns the content to center of screen & uses image as "baby" from "drawable" folder -->
+        <bitmap
+            android:gravity="center"
+            android:src="@drawable/baby_splash" />
+    </item>
+
+</layer-list>

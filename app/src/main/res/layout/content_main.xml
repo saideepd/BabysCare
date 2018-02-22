@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#424242"
+    android:orientation="vertical"
+    android:padding="2dp"
+    tools:showIn="@layout/app_bar_main">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#424242"
+        android:orientation="vertical"
+        android:padding="2dp"
+        android:weightSum="5">
+        <!-- weightSum is the sum of all the Linear Layouts on the screen, 4 layouts so each 1 layout will have weight as 1 -->
+        <!-- 1 specifies that it will occupy 1/4th space on screen -->
+
+            <!-- Added just for adjustment to UI -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_weight="1"/>
+
+        <!-- Linear Layout for NutritionCategory -->
+        <LinearLayout
+            android:id="@+id/nutrition"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="2dp"
+            android:layout_weight="1"
+            android:background="#3F51B5"
+            android:clickable="true"
+            android:focusable="true"
+            android:onClick="nutritionClick"
+            android:padding="5dp"> <!-- It'll intent to NutritionActivity from nutritionClick method defined in CategoriesActivity.java -->
+
+            <!-- LinearLayout for Name & Description of NutritionCategory -->
+            <LinearLayout
+                android:id="@+id/linearNameDesc1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:orientation="vertical"
+                android:paddingRight="102dp"> <!-- Adjusted margin of TextViews to shift Image to it's right -->
+
+                <TextView
+                    android:id="@+id/nutritionName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nutrition"
+                    android:textColor="#FAFAFA"
+                    android:textSize="35sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/nutritionDescription"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="5dp"
+                    android:text="Proper Food"
+                    android:textColor="#FAFAFA"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <!-- LinearLayout for Image of NutritionCategory -->
+            <LinearLayout
+                android:id="@+id/linearImage1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:padding="10dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:contentDescription="Nutrition Imsge"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/nutrition" />
+            </LinearLayout>
+        </LinearLayout>
+        <!-- Layout for NutritionCategory Ends here -->
+
+        <!-- *********************************************************************** -->
+
+        <!-- Linear Layout for TreatmentCategory -->
+        <LinearLayout
+            android:id="@+id/treatment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1"
+            android:background="#26A69A"
+            android:clickable="true"
+            android:focusable="true"
+            android:onClick="treatmentClick"
+            android:padding="5dp"> <!-- It'll intent to TreatmentActivity from treatmentClick method defined in CategoriesActivity.java -->
+
+            <!-- LinearLayout for Name & Description of TreatmentCategory -->
+            <LinearLayout
+                android:id="@+id/linearNameDesc2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:orientation="vertical"
+                android:paddingRight="82dp"> <!-- Adjusted margin of TextViews to shift Image to it's right -->
+
+                <TextView
+                    android:id="@+id/treatmentName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Treatment"
+                    android:textColor="#FAFAFA"
+                    android:textSize="35sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/treatmentDescription"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="5dp"
+                    android:text="Handling Baby"
+                    android:textColor="#FAFAFA"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <!-- LinearLayout for Image of TreatmentCategory -->
+            <LinearLayout
+                android:id="@+id/linearImage2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:padding="10dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:contentDescription="Treatment Image"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/treatment" />
+            </LinearLayout>
+        </LinearLayout>
+        <!-- Layout for TreatmentCategory Ends here -->
+
+        <!-- *********************************************************************** -->
+
+        <!-- Linear Layout for EmergencyCategory -->
+        <LinearLayout
+            android:id="@+id/emergency"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1"
+            android:background="#FF7043"
+            android:clickable="true"
+            android:focusable="true"
+            android:onClick="emergencyClick"
+            android:padding="5dp"> <!-- It'll intent to EmergencyActivity from emergencyClick method defined in CategoriesActivity.java -->
+
+            <!-- LinearLayout for Name & Description of EmergencyCategory -->
+            <LinearLayout
+                android:id="@+id/linearNameDesc3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:orientation="vertical"
+                android:paddingRight="65dp"> <!-- Adjusted margin of TextViews to shift Image to it's right -->
+
+                <TextView
+                    android:id="@+id/emergencyName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Emergency"
+                    android:textColor="#FAFAFA"
+                    android:textSize="35sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/emergencyDescription"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="5dp"
+                    android:text="First Aid Treatment"
+                    android:textColor="#FAFAFA"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <!-- LinearLayout for Image of EmergencyCategory -->
+            <LinearLayout
+                android:id="@+id/linearImage3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:padding="10dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:contentDescription="Emergency Image"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/emergency" />
+            </LinearLayout>
+        </LinearLayout>
+        <!-- Layout for EmergencyCategory Ends here -->
+
+        <!-- *********************************************************************** -->
+
+        <!-- Linear Layout for CareCategory -->
+        <LinearLayout
+            android:id="@+id/care"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1"
+            android:background="#7e57c2"
+            android:clickable="true"
+            android:focusable="true"
+            android:onClick="careClick"
+            android:padding="5dp"> <!-- It'll intent to CareActivity from careClick method defined in CategoriesActivity.java -->
+
+            <!-- LinearLayout for Name & Description of CareCategory -->
+            <LinearLayout
+                android:id="@+id/linearNameDesc4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:orientation="vertical"
+                android:paddingRight="118dp"> <!-- Adjusted margin of TextViews to shift Image to it's right -->
+
+                <TextView
+                    android:id="@+id/careName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Care"
+                    android:textColor="#FAFAFA"
+                    android:textSize="35sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/careDescription"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="5dp"
+                    android:text="Child Welfare"
+                    android:textColor="#FAFAFA"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <!-- LinearLayout for Image of CareCategory -->
+            <LinearLayout
+                android:id="@+id/relativeImage4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:padding="10dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:contentDescription="Care Image"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/care" />
+            </LinearLayout>
+        </LinearLayout>
+        <!-- Layout for CareCategory Ends here -->
+    </LinearLayout>
+    <!-- Frame Layout for Fragment replacement -->
+    <FrameLayout
+        android:id="@+id/content_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</RelativeLayout>
+

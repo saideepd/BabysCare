@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#424242"
+    android:padding="2dp"
+    android:orientation="vertical"
+    android:weightSum="2">
+
+    <!-- Added just for adjustment to UI >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"/-->
+
+    <!-- LinearLayout for First Months -->
+    <LinearLayout
+        android:id="@+id/firstMonthsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#283593"
+        android:layout_marginTop="2dp"
+        android:onClick="firstMonthsClick"
+        android:layout_weight="1"> <!-- Clickable is set to False to avoid mis-clicks-->
+
+        <TextView
+            android:id="@+id/firstMonths"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="35sp"
+            android:textColor="#FAFAFA"
+            android:textStyle="bold"
+            android:layout_margin="10dp"
+            android:layout_gravity="center"
+            android:text="First Months"/>
+    </LinearLayout>
+
+    <!-- LinearLayout for Childhood Illness -->
+    <LinearLayout
+        android:id="@+id/childhoodIllnessLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ff8f00"
+        android:layout_marginTop="5dp"
+        android:onClick="childhoodIllnessClick"
+        android:layout_weight="1"> <!-- Clickable is set to False to avoid mis-clicks-->
+
+        <TextView
+            android:id="@+id/childhoodIllness"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="35sp"
+            android:textColor="#FAFAFA"
+            android:textStyle="bold"
+            android:layout_margin="10dp"
+            android:layout_gravity="center"
+            android:text="Childhood Illness"/>
+    </LinearLayout>
+
+</LinearLayout>

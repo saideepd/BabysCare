@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#424242"
+    android:padding="2dp"
+    android:orientation="vertical"
+    android:weightSum="2">
+
+    <!-- Added just for adjustment to UI >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"/-->
+
+    <!-- LinearLayout for First Aid -->
+    <LinearLayout
+        android:id="@+id/firstAidLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#f44336"
+        android:layout_marginTop="2dp"
+        android:onClick="firstAidClick"
+        android:layout_weight="1"> <!-- Clickable is set to False to avoid mis-clicks-->
+
+        <TextView
+            android:id="@+id/firstAid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="35sp"
+            android:textColor="#FAFAFA"
+            android:textStyle="bold"
+            android:layout_margin="10dp"
+            android:layout_gravity="center"
+            android:text="First Aid"/>
+    </LinearLayout>
+
+    <!-- **********************************************************************
+        This thing needs to be worked on to integrate Google Maps API
+         **********************************************************************-->
+
+    <!-- LinearLayout for Nearby Doctors, Clinics, Hospitals Map -->
+    <LinearLayout
+        android:id="@+id/mapLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:clickable="false"
+        android:layout_weight="1"> <!-- Clickable is set to False to avoid mis-clicks-->
+
+        <TextView
+            android:id="@+id/map"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="35sp"
+            android:textColor="#FAFAFA"
+            android:textStyle="bold"
+            android:layout_margin="10dp"
+            android:layout_gravity="center"
+            android:text="Map(to be integrated)"/>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_home"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.android.babyscare.DetailsActivity">
+
+    <!-- Birth Date Text -->
+    <TextView
+        android:id="@+id/text_view_birth_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="90dp"
+        android:text="Birth Date"
+        android:textColor="@android:color/black"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <!-- EditText to select Birth Date
+        Modify this EditText so that it'll display a Calendar Dialog to choose the Date -->
+    <!-- Currently it can accept manual birth entry but user can even enter wrong date
+        So modify it to display Calendar Dialog for choosing the date -->
+    <EditText
+        android:id="@+id/editText_birth_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text_view_birth_date"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:ems="11"
+        android:hint="Click Here to choose Date"
+        android:inputType="date"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimary"
+        android:theme="@style/DatePickerTheme"
+        android:textSize="20sp" /> <!-- Make some method so it'll display current date -->
+
+    <!-- Weight Text -->
+    <TextView
+        android:id="@+id/weightTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="60dp"
+        android:layout_below="@+id/editText_birth_date"
+        android:text="Weight"
+        android:textColor="@android:color/black"
+        android:textSize="30sp"
+        android:textStyle="bold"/>
+
+    <!-- Number Picker for Weight -->
+    <NumberPicker
+        android:id="@+id/numberPicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/weightTextView"/>
+
+
+    <!-- EditText to enter the Weight of new born child >
+    <EditText
+        android:id="@+id/editText_weight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text_view_weight"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:ems="8"
+        android:hint="@string/weight_in_kgs"
+        android:inputType="numberDecimal"
+        android:textAlignment="center"
+        android:textSize="20sp" /-->
+
+    <!-- OK button to confirm details and proceed further -->
+    <Button
+        android:id="@+id/ok_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="50dp"
+        android:background="#1E88E5"
+        android:layout_centerHorizontal="true"
+        android:text="OK"
+        android:textAllCaps="true"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:onClick="okButtonClick"/> <!-- Name of method that intents to other activity on OK button click -->
+</RelativeLayout>

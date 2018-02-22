@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.android.babyscare">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <!-- Initially Splash Screen Activity will be displayed in Portrait mode -->
+        <!-- Since, we want to display Splash Screen and we have defined Splash Theme in styles.xml then use theme name as "SplashTheme" -->
+        <activity
+            android:name=".SplashActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- All Activities below will be displayed in Portrait Mode -->
+        <!-- MainActivity of Birth Date & Weight -->
+        <activity
+            android:name=".MainActivity"
+            android:configChanges="orientation"
+            android:label="@string/title_activity_main"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+
+        <!-- Details Activity (Categories) -->
+        <activity
+            android:name=".DetailsActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity android:name=".NutritionActivity" />
+        <activity android:name=".TreatmentActivity" />
+        <activity android:name=".EmergencyActivity" />
+        <activity android:name=".CareActivity" />
+        <activity android:name=".FoodInformationActivity" />
+        <activity android:name=".FeedingGuidanceActivity" />
+        <activity android:name=".FoodStockActivity" />
+        <activity android:name=".FirstMonthsActivity" />
+        <activity android:name=".ChildhoodIllnessActivity" />
+        <activity android:name=".FirstAidActivity"></activity>
+    </application>
+
+</manifest>

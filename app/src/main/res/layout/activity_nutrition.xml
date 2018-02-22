@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:clickable="false">
+
+    <!-- Vertical LinearLayout for NutritionActivity -->
+    <LinearLayout
+        android:id="@+id/foodInformation"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:background="#424242"
+        android:padding="2dp"
+        android:weightSum="3"
+        android:clickable="false">
+
+        <!-- Added just for adjustment to UI >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"/-->
+
+        <!-- LinearLayout for Food Information -->
+        <LinearLayout
+            android:id="@+id/foodInformationLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#00b8d4"
+            android:layout_marginTop="2dp"
+            android:onClick="foodInformationClick"
+            android:layout_weight="1"> <!-- Clickable is set to False to avoid mis-clicks-->
+
+            <TextView
+                android:id="@+id/nutritionName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="35sp"
+                android:textColor="#FAFAFA"
+                android:textStyle="bold"
+                android:layout_margin="10dp"
+                android:layout_gravity="center"
+                android:text="Food Information"/>
+
+        </LinearLayout>
+
+        <!-- LinearLayout for Feeding Guidance -->
+        <LinearLayout
+            android:id="@+id/feedingGuidanceLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#2e7d32"
+            android:layout_marginTop="5dp"
+            android:onClick="feedingGuidanceClick"
+            android:layout_weight="1"> <!-- Clickable is set to False to avoid mis-clicks-->
+
+            <TextView
+                android:id="@+id/feedingGuidanceName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="35sp"
+                android:textColor="#FAFAFA"
+                android:textStyle="bold"
+                android:layout_margin="10dp"
+                android:layout_gravity="center"
+                android:text="Feeding Guidance"/>
+
+        </LinearLayout>
+
+        <!-- LinearLayout for Food Information -->
+        <LinearLayout
+            android:id="@+id/foodStockLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffab00"
+            android:layout_marginTop="5dp"
+            android:onClick="foodStockClick"
+            android:layout_weight="1"> <!-- Clickable is set to False to avoid mis-clicks-->
+
+            <TextView
+                android:id="@+id/foodStockName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="35sp"
+                android:textColor="#FAFAFA"
+                android:textStyle="bold"
+                android:layout_margin="10dp"
+                android:layout_gravity="center"
+                android:text="Food Stock"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
