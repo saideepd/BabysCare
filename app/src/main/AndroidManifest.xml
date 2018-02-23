@@ -29,7 +29,7 @@
         <activity
             android:name=".MainActivity"
             android:configChanges="orientation"
-            android:label="@string/title_activity_main"
+            android:label="Baby's Care"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
 
@@ -43,6 +43,7 @@
         <activity
             android:name=".NutritionActivity"
             android:configChanges="orientation"
+            android:label="Nutrition"
             android:screenOrientation="portrait" />
 
         <!-- Treatment Activity -->

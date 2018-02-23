@@ -114,10 +114,10 @@ public class MainActivity extends AppCompatActivity
 
         //initializing the fragment object which is selected
         switch (itemId) {
-            case R.id.nav_home:
+            /*case R.id.nav_home:
                 Intent intent = new Intent(this, MainActivity.class);
                 startActivity(intent);
-                break;
+                break;*/
             case R.id.nav_nutrition:
                 Intent intent1 = new Intent(this, NutritionActivity.class);
                 startActivity(intent1);

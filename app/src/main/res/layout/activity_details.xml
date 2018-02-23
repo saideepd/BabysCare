@@ -49,7 +49,7 @@
         android:layout_centerVertical="true"
         android:layout_marginTop="60dp"
         android:layout_below="@+id/editText_birth_date"
-        android:text="Weight"
+        android:text="Weight (in KGs)"
         android:textColor="@android:color/black"
         android:textSize="30sp"
         android:textStyle="bold"/>
