@@ -38,16 +38,66 @@
             android:name=".DetailsActivity"
             android:configChanges="orientation"
             android:screenOrientation="portrait" />
-        <activity android:name=".NutritionActivity" />
-        <activity android:name=".TreatmentActivity" />
-        <activity android:name=".EmergencyActivity" />
-        <activity android:name=".CareActivity" />
-        <activity android:name=".FoodInformationActivity" />
-        <activity android:name=".FeedingGuidanceActivity" />
-        <activity android:name=".FoodStockActivity" />
-        <activity android:name=".FirstMonthsActivity" />
-        <activity android:name=".ChildhoodIllnessActivity" />
-        <activity android:name=".FirstAidActivity"></activity>
+
+        <!-- Nutrition Activity -->
+        <activity
+            android:name=".NutritionActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+
+        <!-- Treatment Activity -->
+        <activity
+            android:name=".TreatmentActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+
+        <!-- Emergency Activity -->
+        <activity
+            android:name=".EmergencyActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+
+        <!-- Care Activity -->
+        <activity
+            android:name=".CareActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+
+        <!-- Food Information Activity -->
+        <activity
+            android:name=".FoodInformationActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+
+        <!-- Feeding Guidance Activity -->
+        <activity
+            android:name=".FeedingGuidanceActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+
+        <!-- Food Stock Activity -->
+        <activity
+            android:name=".FoodStockActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+
+        <!-- First Months Activity -->
+        <activity
+            android:name=".FirstMonthsActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+
+        <!-- Childhood Illness Activity -->
+        <activity
+            android:name=".ChildhoodIllnessActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+
+        <!-- First Aid Activity -->
+        <activity
+            android:name=".FirstAidActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>
