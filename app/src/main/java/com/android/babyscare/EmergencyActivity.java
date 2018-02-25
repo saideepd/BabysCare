@@ -21,4 +21,13 @@ public class EmergencyActivity extends AppCompatActivity {
         Intent intent = new Intent(this, FirstAidActivity.class);
         startActivity(intent);
     }
+
+    /**
+     * mapClick method will intent to
+     * Map Activity
+     */
+    public void mapClick(View view) {
+        Intent intent = new Intent(this, MapsActivity.class);
+        startActivity(intent);
+    }
 }

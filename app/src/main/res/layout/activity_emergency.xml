@@ -8,56 +8,137 @@
     android:orientation="vertical"
     android:weightSum="2">
 
+
+    <!-- Linear Layout for FirstAidCategory -->
+    <LinearLayout
+        android:id="@+id/firstAidLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="2dp"
+        android:layout_weight="1"
+        android:background="#E53935"
+        android:clickable="true"
+        android:focusable="true"
+        android:onClick="firstAidClick"
+        android:padding="5dp"> <!-- It'll intent to FirstAid from firstAidClick method defined in EmergencyActivity.java -->
+
+        <!-- LinearLayout for Name & Description of FirstAid -->
+        <LinearLayout
+            android:id="@+id/FirstAidNameDesc1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:orientation="vertical"
+            android:paddingRight="72dp"> <!-- Adjusted margin of TextViews to shift Image to it's right -->
+
+            <TextView
+                android:id="@+id/firstAidName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="First Aid"
+                android:textColor="#FAFAFA"
+                android:textSize="45sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/firstAidDesc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Quick Medication"
+                android:textColor="#FAFAFA"
+                android:paddingLeft="5dp"
+                android:textSize="25sp" />
+        </LinearLayout>
+
+        <!-- LinearLayout for Image of First Aid Category -->
+        <LinearLayout
+            android:id="@+id/linearImage1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:padding="5dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:contentDescription="First Aid Image"
+                android:scaleType="fitCenter"
+                android:src="@drawable/emergency" />
+        </LinearLayout>
+    </LinearLayout>
+    <!-- Layout for FirstAidCategory Ends here -->
+
     <!-- Added just for adjustment to UI >
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"/-->
 
-    <!-- LinearLayout for First Aid -->
+    <!-- Linear Layout for Nearby Hospitals on Map -->
     <LinearLayout
-        android:id="@+id/firstAidLayout"
+        android:id="@+id/MapLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#f44336"
+        android:layout_gravity="center"
         android:layout_marginTop="2dp"
-        android:onClick="firstAidClick"
-        android:layout_weight="1"> <!-- Clickable is set to False to avoid mis-clicks-->
+        android:layout_weight="1"
+        android:background="#3F51B5"
+        android:clickable="true"
+        android:focusable="true"
+        android:onClick="mapClick"
+        android:padding="5dp"> <!-- It'll intent to MapActivity from mapClick method defined in EmergencyActivity.java -->
 
-        <TextView
-            android:id="@+id/firstAid"
+        <!-- LinearLayout for Name & Description of Map -->
+        <LinearLayout
+            android:id="@+id/mapNameDesc2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="35sp"
-            android:textColor="#FAFAFA"
-            android:textStyle="bold"
-            android:layout_margin="10dp"
             android:layout_gravity="center"
-            android:text="First Aid"/>
-    </LinearLayout>
+            android:layout_margin="5dp"
+            android:orientation="vertical"
+            android:paddingRight="75dp"> <!-- Adjusted margin of TextViews to shift Image to it's right -->
 
-    <!-- **********************************************************************
-        This thing needs to be worked on to integrate Google Maps API
-         **********************************************************************-->
+            <TextView
+                android:id="@+id/MapName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Map"
+                android:textColor="#FAFAFA"
+                android:textSize="45sp"
+                android:textStyle="bold" />
 
-    <!-- LinearLayout for Nearby Doctors, Clinics, Hospitals Map -->
-    <LinearLayout
-        android:id="@+id/mapLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:clickable="false"
-        android:layout_weight="1"> <!-- Clickable is set to False to avoid mis-clicks-->
+            <TextView
+                android:id="@+id/nearbyHospital"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="5dp"
+                android:text="Nearby Hospitals"
+                android:textColor="#FAFAFA"
+                android:textSize="25sp" />
+        </LinearLayout>
 
-        <TextView
-            android:id="@+id/map"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="35sp"
-            android:textColor="#FAFAFA"
-            android:textStyle="bold"
-            android:layout_margin="10dp"
+        <!-- LinearLayout for Image of MapCategory -->
+        <LinearLayout
+            android:id="@+id/linearImage2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_gravity="center"
-            android:text="Map(to be integrated)"/>
+            android:padding="10dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:contentDescription="Map Image"
+                android:scaleType="fitCenter"
+                android:src="@drawable/mapmarker1" />
+        </LinearLayout>
     </LinearLayout>
+    <!-- Layout for NutritionCategory Ends here -->
+
+
+
 
 </LinearLayout>
