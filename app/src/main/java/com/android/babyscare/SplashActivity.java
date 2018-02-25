@@ -14,7 +14,7 @@ public class SplashActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         // Start home activity
-        startActivity(new Intent(SplashActivity.this, DetailsActivity.class));
+        startActivity(new Intent(SplashActivity.this, MainActivity.class));
 
         // close splash activity
         finish();
