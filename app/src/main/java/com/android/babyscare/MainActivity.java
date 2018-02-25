@@ -10,8 +10,12 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
+
+import java.io.IOException;
+import java.sql.SQLException;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -22,6 +26,22 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        DataBaseHelper myDB = new DataBaseHelper(this);
+        try {
+            Log.i("create","h");
+            myDB.createDataBase();
+        } catch (IOException e) {
+            e.printStackTrace();
+            Log.i("create error",e.getMessage());
+        }
+        try {
+            Log.i("Open","YES");
+            myDB.openDataBase();
+        } catch (SQLException e) {
+            e.printStackTrace();
+            Log.i("Open Error",e.getMessage());
+        }
 
         /*
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);

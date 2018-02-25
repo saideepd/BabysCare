@@ -6,10 +6,18 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context="com.android.babyscare.FeedingGuidanceActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp"
+        tools:ignore="MissingConstraints">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Feeding Guidance Text"/>
+        <ExpandableListView
+            android:id="@+id/expandable_food_guide"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
 
+    </LinearLayout>
 </android.support.constraint.ConstraintLayout>

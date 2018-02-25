@@ -7,9 +7,25 @@
     android:orientation="vertical"
     tools:context="com.android.babyscare.FirstMonthsActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="First Months Text"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <ImageView
+            android:id="@+id/first_month_imageview"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_margin="10dp"
+            android:scaleType="centerCrop"/>
 
+        <TextView
+            android:id="@+id/first_month_textview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:textColor="#000"
+            android:textSize="20sp"
+            android:gravity="center_vertical"
+            android:layout_margin="20dp"/>
+    </LinearLayout>
 </android.support.constraint.ConstraintLayout>

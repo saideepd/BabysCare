@@ -2,25 +2,29 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
+    xmlns:tools="http://schemas.android.com/tools"
     android:background="@android:color/white"
     android:orientation="vertical"
     android:clickable="false"
     android:focusable="false"> <!-- Clickable is set to False to avoid mis-clicks-->
 
-    <!--LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="50dp" /-->
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Child Welfare Tips"
-        android:textColor="@android:color/black" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp"
+        android:padding="5dp"
+        tools:ignore="MissingConstraints">
 
-    <ImageView
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:src="@drawable/ic_menu_camera" />
+
+        <ExpandableListView
+            android:id="@+id/expandable_care"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="2dp"/>
+
+    </LinearLayout>
 
 </LinearLayout>
